@@ -21,7 +21,7 @@
 //   return 5;
 // };
 
-// const fn = () => { 
+// const fn = () => {
 //   return "text";
 // };
 
@@ -30,7 +30,7 @@
 // };
 
 // const fn = () => {
-//     return null;
+//   return null;
 // };
 
 // const fn = () => {
@@ -38,7 +38,7 @@
 // };
 
 // const fn = () => {
-//   return {key: "value"};
+//   return { key: "value" };
 // };
 
 // console.log(fn);
@@ -50,7 +50,7 @@
 /*********** Shortcut for writing an arrow function **********/
 // const fn = () => 5;
 
-// console.log( fn() );
+// console.log(fn());
 
 /*********** Functions return stop code in code block **********/
 
@@ -64,7 +64,7 @@
 // console.log(log);
 
 /*********** Functions with parameters **********/
-// const fn = num => num; // parameter
+// const fn = (num) => num; // parameter
 
 // const fn = num => {
 //   return num;
@@ -90,8 +90,8 @@
 /*********** Functions return only one thing **********/
 /** early return **/
 
-// const fn = num => {
-//   if (typeof num !== "number") return "Pleas enter number";
+// const fn = (num) => {
+//   if (typeof num !== "number") return "Please enter number";
 //   if (num < 10) return "small";
 //   if (num >= 10) return "big";
 // };
@@ -105,7 +105,7 @@
 
 // console.log(print);
 
-// const fn = num => {
+// const fn = (num) => {
 //   if (num < 10) return "small";
 //   else return "big";
 // };
@@ -121,7 +121,7 @@
 
 /*********** Functions not with early return **********/
 
-// const fn = num => {
+// const fn = (num) => {
 //   if (num < 10) console.log("num is smaller then 10");
 //   if (typeof num === "number") console.log("num is a number");
 //   return console.log("return");
@@ -130,21 +130,21 @@
 // fn(5);
 
 /*********** Falsey and truethy **********/
-// falsey
+// falsey;
 // const emptyString = "";
 // const x = null;
 // const y = undefined;
 // const zero = 0;
 // const bool = false;
 
-//truethy
+// truethy;
 // const string = "not empty";
 // const number = 5;
 // const object = {};
 // const array = [];
 // const boolean = true;
 
-// const log = term => {
+// const log = (term) => {
 //   if (!term) return console.log("falsey property");
 //   console.log("truethy");
 // };
@@ -178,7 +178,7 @@
 
 // console.log(print);
 
-// const obj = { key: "value", second: 5 }
+// const obj = { key: "value", second: 5 };
 // obj.key = 5;
 
 // console.log(obj);

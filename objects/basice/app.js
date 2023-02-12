@@ -109,63 +109,65 @@
 // console.log(obj.walla);
 // console.log(obj);
 
-
 /*********** methods ***********/
-// const key = "walla"
+// const key = "walla";
 
 // const obj = {
-  //   fn() {},
-    // fn() {
-    //   return 5;
-    // },
-    // "fn" : function () {
-    //     return 5
-    // },
-    // fn : ()=>{}
-    // fn: function fn(){
-    //     return 5
-    // }
-  // "fn" : function () {
-  //     return {name: "david", age: 43}
-  // },
-  // "fn 2": function () { return "in fn Twoooo!!!!!!!!!!";},
-//   [key](){
-//       return {friends: [{name: "david", last: "yakin"}, {name: "yoda", last: "yakin"}]}
+//   fn() {},
+//   fn() {
+//     return 5;
 //   },
-  // [fn5](text) { return text;},
-  //   function: "value",
-// };/
+//   "fn" : function () {
+//       return 5
+//   },
+//   fn : ()=>{}
+//   fn: function fn(){
+//       return 5
+//   }
+// "fn" : function () {
+//     return {name: "david", age: 43}
+// },
+// "fn 2": function () { return "in fn Twoooo!!!!!!!!!!";},
+// [key]() {
+//   return {
+//     friends: [
+//       { name: "david", last: "yakin" },
+//       { name: "yoda", last: "yakin" },
+//     ],
+//   };
+// },
+// [fn5](text) { return text;},
+//   function: "value",
+// };
 
-// console.log(obj.walla().friends);
+// console.table(obj.walla().friends);
 // console.log(obj.key())
-
 
 /*********** אובייקטים עם מפתחות מספריים ***********/
 // const obj = { 0: "one", 1: "two", 2: "three" };
-// obj[3] = "four"
+// obj[3] = "four";
 
-// console.log(obj)
-// console.table(obj)
+// console.log(obj);
+// console.table(obj);
 
 /*********** מערכים כאובייקטים ***********/
 
-// const array = ["one", "two","three"]
-// array[3] = "four" // עדיף להשתמש במטודות של מערכים ולא כך
-// array.key = "value"
-// array.fn = ()=> 5 // הכנסת מטודה למערך
+// const array = ["one", "two", "three"];
+// array[3] = "four"; // עדיף להשתמש במטודות של מערכים ולא כך
+// array.key = "value";
+// array.fn = () => 5; // הכנסת מטודה למערך
 
-// console.log(array.fn())
+// console.log(array.fn());
 
+// array.push("five");
+// console.log(array);
 
-// array.push("five")
-// console.log(array)
+// array.unshift("blue");
+// console.log(array);
+// console.log(array[0]);
 
-// array.unshift("blue")
-// console.log(array)
-// console.log(array[0])
+// array.shift();
+// console.log(array);
 
-// array.shift()
-// console.log(array)
-
-// array.splice(1,1)
-// console.log(array)
+// array.splice(1, 1);
+// console.log(array);

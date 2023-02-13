@@ -110,37 +110,37 @@
 // console.log(obj);
 
 /*********** methods ***********/
-// const key = "walla";
+const key = "walla";
 
-// const obj = {
-//   fn() {},
-//   fn() {
-//     return 5;
-//   },
-//   "fn" : function () {
-//       return 5
-//   },
-//   fn : ()=>{}
-//   fn: function fn(){
-//       return 5
-//   }
-// "fn" : function () {
-//     return {name: "david", age: 43}
-// },
-// "fn 2": function () { return "in fn Twoooo!!!!!!!!!!";},
-// [key]() {
-//   return {
-//     friends: [
-//       { name: "david", last: "yakin" },
-//       { name: "yoda", last: "yakin" },
-//     ],
-//   };
-// },
-// [fn5](text) { return text;},
-//   function: "value",
-// };
+const obj = {
+  //   fn() {},
+  //   fn() {
+  //     return 5;
+  //   },
+  //   "fn" : function () {
+  //       return 5
+  //   },
+  //   fn : ()=>{}
+  //   fn: function fn(){
+  //       return 5
+  //   }
+  // "fn" : function () {
+  //     return {name: "david", age: 43}
+  // },
+  // "fn 2": function () { return "in fn Twoooo!!!!!!!!!!";},
+  [key]() {
+    return {
+      friends: [
+        { name: "david", last: "yakin" },
+        { name: "yoda", last: "yakin" },
+      ],
+    };
+  },
+  // [fn5](text) { return text;},
+  //   function: "value",
+};
 
-// console.table(obj.walla().friends);
+console.log((obj.walla().friends[1].last = "mmosh"));
 // console.log(obj.key())
 
 /*********** אובייקטים עם מפתחות מספריים ***********/

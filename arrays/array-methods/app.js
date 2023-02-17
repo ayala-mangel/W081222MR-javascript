@@ -83,3 +83,61 @@
 // console.log(array);
 // console.log(shiftItem);
 // console.log(newArray);
+
+/***** find *****/
+// const letters = ["a", "b", "c"];
+
+// const findInArray = letters.find(letter => {
+//   return letter === "c" || letter === "b";
+// });
+
+// console.log(findInArray);
+
+// const users = [
+//   { name: "david", age: 5 },
+//   { name: "shula", age: 6 },
+//   { name: "shula", age: 47 },
+//   { name: "uri", age: 105 },
+// ];
+
+// const user = users.find(item => item.name === "shula");
+// const user = users.find(item => item.name === "shula" && item.age === 6);
+
+// users.find(user => {
+//   console.log(user);
+//   return user.name === "uri" && user.age === 105;
+// });
+
+// const user = users.find(function (item) {
+//   return item.age === 105;
+// });
+
+// console.log(user);
+
+/***** filter *****/
+// const users = [
+//     { name: "david", age: 5 },
+//     { name: "shula", age: 6 },
+//     { name: "shula", age: 47 },
+//     { name: "uri", age: 105 },
+// ];
+
+// const filteredArray = users.filter(user => user.name === "shula");
+
+// console.log(filteredArray);
+
+/***** map *****/
+// const numbers = [1, 2, 3];
+
+// const mapArray = [...numbers.map(num => num * 2)];
+
+// console.log(numbers);
+// console.log(mapArray);
+
+// const numbers = ["one", "two", "three"];
+
+// [
+//   ...numbers.map((item, index, array) => {
+//     console.log(item, index, array);
+//   }),
+// ];

@@ -141,3 +141,11 @@
 //     console.log(item, index, array);
 //   }),
 // ];
+
+/***** join *****/
+// const array = ["one", "two", "three"];
+// console.log(array);
+
+// const text = array.join(" ");
+// const text = array.join("-");
+// console.log(text);

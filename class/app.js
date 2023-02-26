@@ -1,57 +1,57 @@
 /********* Class *********/
 // התבנית הבסיסית ביותר
-// class Mercedes {}
+// class Car {}
 
-// function Mercedes() {
+// function Car() {
 //   return {};
 // }
 
 // const arrow = () => {};
 
 // console.dir(arrow);
-// console.dir(Mercedes);
+// console.dir(Car);
 
-// const car = new Mercedes();
-// const car2 = new Mercedes();
-// const car3 = new Mercedes();
+// const car = new Car();
+// const car2 = new Car();
+// const car3 = new Car();
 
-// console.log(Mercedes);
+// console.log(Car);
 // console.log(car);
 
 // הכנסת מפתחות וערכים למחלקה
-// class User {
-//   name = "David";
+// class Car {
+//   color = "black";
 // }
 
-// const user = new User();
+// const car = new Car();
 
-// console.log(user);
+// console.log(car);
 
-// const user2 = new User();
-// const user3 = new User();
+// const car2 = new Car();
+// const car3 = new Car();
 
-// user.age = 43;
+// car.wheels = 4;
 
-// console.log(user2);
-// console.log(user3);
+// console.log(car2);
+// console.log(car3);
 
 // קבלת ערכים של מפתחות במחלקה באמצעות הבנאי
 
-// class User {
-//   name;
-//   age;
+// class Car {
+//   color;
+//   wheels;
 
-//   constructor(name, age) {
-//     this.name = name;
-//     this.age = age;
+//   constructor(color, wheels = 4) {
+//     this.color = color;
+//     this.wheels = wheels;
 //   }
 // }
 
-// const user = new User("David Yakin", 43);
-// const user2 = new User("Ayala Hason");
+// const car = new Car("Black", 6);
+// const car2 = new Car("green");
 
-// console.log(user);
-// console.log(user2);
+// console.log(car);
+// console.log(car2);
 
 // הכנסת מטודות לאובייקט הפרוטוטייפ בתוך המחלקה
 // class Car {
@@ -207,10 +207,12 @@
 
 /********** Authorization with set **********/
 // class Car {
+//   wheels = 4;
 //   color;
 //   #km = 0;
 //   #fuelTank = 0;
 //   static CONSUMPTION = 0.5;
+//   static FUEL_CAPACITY = 50;
 
 //   constructor(color = "black") {
 //     if (typeof color !== "string") throw new Error("color must be a string");
@@ -221,7 +223,7 @@
 //     if (
 //       typeof liters !== "number" ||
 //       liters <= 0 ||
-//       liters + this.#fuelTank > 50
+//       liters + this.#fuelTank > Car.FUEL_CAPACITY
 //     )
 //       throw new Error("Liters must be type number between 1-50");
 //     this.#fuelTank += liters;
@@ -244,7 +246,7 @@
 //     return this.#fuelTank;
 //   }
 
-//   set km({ fuel, isAdmin }) {
+//   set fuelTank({ fuel, isAdmin }) {
 //     if (typeof isAdmin !== "boolean" || !isAdmin)
 //       throw new Error("you must be user type admin to change km!");
 //     if (typeof fuel !== "number" || fuel <= 0 || fuel + this.#fuelTank > 50)
@@ -256,9 +258,51 @@
 // const car = new Car();
 // car.fuel(10);
 // car.drive(10);
-// car.color = "red from goash!!!";
-// console.log(car.fuelTank);
+// console.log(car.km);
 // car.km = { km: 5, isAdmin: false };
 // car.km = { fuel: 40, isAdmin: true };
-
 // console.log(car);
+
+/********** Extends **********/
+// class Motorcycle extends Car {
+//   handlebar = 1;
+//   static FUEL_CAPACITY = 25;
+// }
+
+/********** new class with try & catch **********/
+// class Motorcycle extends Car {
+//   handlebar = 1;
+//   static FUEL_CAPACITY = 25;
+//   constructor(color = "red", wheels = 2) {
+//     super();
+//     this.wheels = wheels;
+//     this.color = color;
+//   }
+// }
+
+// const motorcycle = new Motorcycle("green");
+
+// motorcycle.fuel(10);
+// motorcycle.drive(20);
+// console.log(Motorcycle.FUEL_CAPACITY);
+
+// const fuelCar = (motorcycle, litters) => {
+//   try {
+//     motorcycle.fuel(litters);
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// };
+
+// const carDrive = (car, km) => {
+//   try {
+//     car.drive(km);
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// };
+
+// fuelCar(motorcycle, 0);
+// carDrive(motorcycle, 1000);
+
+// console.log(motorcycle);

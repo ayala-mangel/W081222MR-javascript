@@ -7,7 +7,7 @@
 
 /***** Sort *****/
 // const array = [3, 1, 2];
-// const array = ["a", "c", "b"];
+// const array = ["c", "a", "b"];
 
 // const sortedArray = array.sort();
 
@@ -24,7 +24,7 @@
 // console.log(array);
 // console.log(reverseArray);
 
-// const sortArray = array => {
+// const sortArray = (array) => {
 //   if (typeof array !== "object") return "Please enter an array!";
 //   if (!array.length) return array;
 //   const newArray = [...array];
@@ -32,7 +32,7 @@
 //   return sortedArray;
 // };
 
-// const sortAndReversedArray = array => {
+// const sortAndReversedArray = (array) => {
 //   if (typeof array !== "object") return "Please enter an array!";
 //   if (!array.length) return array;
 //   const newArray = [...array];
@@ -49,6 +49,7 @@
 // console.log(arrayFixed);
 
 // const arrayFixed = sortAndReversedArray(array);
+// const arrayFixed = array.sort().reverse();
 // console.log(arrayFixed);
 
 /***** push *****/
@@ -87,7 +88,7 @@
 /***** find *****/
 // const letters = ["a", "b", "c"];
 
-// const findInArray = letters.find(letter => {
+// const findInArray = letters.find((letter) => {
 //   return letter === "c" || letter === "b";
 // });
 
@@ -100,10 +101,10 @@
 //   { name: "uri", age: 105 },
 // ];
 
-// const user = users.find(item => item.name === "shula");
-// const user = users.find(item => item.name === "shula" && item.age === 6);
+// const user = users.find((item) => item.name === "shula");
+// const user = users.find((item) => item.name === "shula" && item.age === 6);
 
-// users.find(user => {
+// users.find((user) => {
 //   console.log(user);
 //   return user.name === "uri" && user.age === 105;
 // });
@@ -116,20 +117,26 @@
 
 /***** filter *****/
 // const users = [
-//     { name: "david", age: 5 },
-//     { name: "shula", age: 6 },
-//     { name: "shula", age: 47 },
-//     { name: "uri", age: 105 },
+//   { name: "david", age: 5 },
+//   { name: "shula", age: 6 },
+//   { name: "shula", age: 47 },
+//   { name: "shula", age: 4 },
+//   { name: "uri", age: 105 },
 // ];
 
-// const filteredArray = users.filter(user => user.name === "shula");
+// const filteredArray = users.filter((user) => user.name === "shula");
+// const a = [...filteredArray];
+// const p = a.pop();
+// a.unshift(p);
 
 // console.log(filteredArray);
+// console.log(a);
+// console.log(users);
 
 /***** map *****/
 // const numbers = [1, 2, 3];
 
-// const mapArray = [...numbers.map(num => num * 2)];
+// const mapArray = [...numbers.map((num) => num * 2)];
 
 // console.log(numbers);
 // console.log(mapArray);

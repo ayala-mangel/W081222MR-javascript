@@ -187,20 +187,20 @@
 
 /*********** Callback functions **********/
 
-// const fn = cb => {
+// const fn = (cb) => {
 //   if (typeof cb !== "function") return "not a function";
 //   return cb();
 // };
 
 // const x = () => 5;
 
-// // const print = fn(3);
+// const print = fn(3);
 // const print = fn(x);
 
 // console.log(print);
 
 // const secondFn = (text, cb) => {
-//     console.log(text);
+//   console.log(text);
 //   return cb(); // hallo
 // };
 

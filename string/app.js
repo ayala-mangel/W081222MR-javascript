@@ -1,24 +1,25 @@
 /********** סוגי מחרוזות תווים **********/
 // let str = "";
-// let str1 = '';
-// let str2 = ``;+
+// let str1 = "";
+// let str2 = ``;
 
 /***** String ******/
 // const term = false;
 // console.log(typeof term);
 
 // const text = String(term);
-// const x = "false"
+// const x = "false";
 
 // console.log(typeof text);
 
 // const obj = { key: "value" };
 // const toString = String(obj);
 // console.log(typeof toString);
+// console.log(typeof obj);
 
 /***** charAt(index) returns the character at the specified index *****/
 // const text = "i am your father";
-// const solution = text.charAt(0)
+// const solution = text.charAt(0);
 // console.log(solution);
 
 /*****  replace("string", "stringToReplace") replaces a string with another string *****/
@@ -84,7 +85,7 @@
 
 // const term = "i haVe to tAke a dump";
 
-// const makeEveryFirstLetterCapital = text => {
+// const makeEveryFirstLetterCapital = (text) => {
 //   const splitText = text.split(" ");
 
 //   for (let i = 0; i < splitText.length; i++) {

@@ -156,3 +156,11 @@
 // const text = array.join(" ");
 // const text = array.join("-");
 // console.log(text);
+
+/***** findIndex *****/
+// const array = ["one", "two", "three"];
+
+// const isInArray = array.findIndex(item => item === "two");
+// const isInArray = array.findIndex(item => item === "four");
+
+// console.log(isInArray);

@@ -109,36 +109,34 @@
 // console.log(obj.walla);
 // console.log(obj);
 
-
 /*********** methods ***********/
 // const key = "walla"
 
 // const obj = {
-  //   fn() {},
-    // fn() {
-    //   return 5;
-    // },
-    // "fn" : function () {
-    //     return 5
-    // },
-    // fn : ()=>{}
-    // fn: function fn(){
-    //     return 5
-    // }
-  // "fn" : function () {
-  //     return {name: "david", age: 43}
-  // },
-  // "fn 2": function () { return "in fn Twoooo!!!!!!!!!!";},
+//   fn() {},
+// fn() {
+//   return 5;
+// },
+// "fn" : function () {
+//     return 5
+// },
+// fn : ()=>{}
+// fn: function fn(){
+//     return 5
+// }
+// "fn" : function () {
+//     return {name: "david", age: 43}
+// },
+// "fn 2": function () { return "in fn Twoooo!!!!!!!!!!";},
 //   [key](){
 //       return {friends: [{name: "david", last: "yakin"}, {name: "yoda", last: "yakin"}]}
 //   },
-  // [fn5](text) { return text;},
-  //   function: "value",
+// [fn5](text) { return text;},
+//   function: "value",
 // };/
 
 // console.log(obj.walla().friends);
 // console.log(obj.key())
-
 
 /*********** אובייקטים עם מפתחות מספריים ***********/
 // const obj = { 0: "one", 1: "two", 2: "three" };
@@ -156,7 +154,6 @@
 
 // console.log(array.fn())
 
-
 // array.push("five")
 // console.log(array)
 
@@ -169,3 +166,62 @@
 
 // array.splice(1,1)
 // console.log(array)
+
+/*********** alias - כינויים ***********/
+// const obj = {
+//   name: "David",
+//   age: 42,
+//   address: {
+//     city: "Jerusalem",
+//     street: "aza",
+//     houseNum: 15,
+//   },
+// };
+
+// const obj2 = {
+//   name: "shula",
+// };
+
+// const {
+//   name: myName,
+//   age,
+//   address,
+//   address: { city: myCity, street, houseNum },
+// } = obj;
+
+// const { name } = obj;
+// const name = obj.name
+
+// const { name: myName } = obj2;
+// const myName = obj2.name
+
+// console.log(obj.name);
+// console.log(myName);
+
+// const obj = {
+//   name: "David",
+//   age: 42,
+//   address: {
+//     city: "Jerusalem",
+//     street: "aza",
+//     houseNum: 15,
+//   },
+// };
+
+// const { address: myAddress } = obj;
+// const {city} = myAddress
+
+// const {
+//   address: { city, street },
+// } = obj;
+
+// const city = obj.address.city
+
+// console.log(city);
+// console.log(street);
+// console.log(obj.address);
+
+// console.log(myCity);
+// console.log(myName);
+// console.table(address);
+// console.log(city);

@@ -73,3 +73,64 @@ import Validation from "./Validation.js";
 // const isFormValidate = handleDisableSubmitBtn();
 // console.log(!!isFormValidate);
 // if (!isFormValidate) onSubmit();
+
+/********** Form Example **********/
+import useForm from "./useForm.js";
+export const EMAIL_FIELD = document.getElementById("email-field");
+export const EMAIL_ERROR = document.getElementById("email-error");
+export const PASSWORD_FIELD = document.getElementById("password-field");
+export const PASSWORD_ERROR = document.getElementById("password-error");
+export const CANCEL_BTN = document.getElementById("cancel");
+export const SUBMIT_BTN = document.getElementById("submit");
+
+// לניקוי שדות ושגיאות
+const INPUTS_ARRAY = [EMAIL_FIELD, PASSWORD_FIELD];
+const ERRORS_ARRAY = [EMAIL_ERROR, PASSWORD_ERROR];
+
+// טופס ראשוני עם שמות כל השדות והערכים ריקים
+const FORM_INIT = {
+  email: "",
+  password: "",
+};
+
+// סכמה שצורך ולידציה של המחלקה שאחראית על כל
+const SCHEMA = {
+  email: "email",
+  password: "password",
+};
+
+// איפוס שדות הטופס והמשתנים הגלובליים והשגיאות
+const onReset = (inputsArray, errorsArray) => {
+  handleReset();
+  inputsArray.map(input => {
+    input.value = "";
+  });
+  errorsArray.map(err => {
+    err.innerHTML = "";
+  });
+};
+
+// פונקציה שתופעל עם שחרור כפתור שליחה
+const handleSubmit = data => {
+  console.table(data);
+  onReset(INPUTS_ARRAY, ERRORS_ARRAY);
+};
+
+// מטודה שאחראית לניהול הטופס והשדות שבו והכפתורים
+const { handleInputChange, onSubmit, handleDisableSubmitBtn, handleReset } =
+  useForm(FORM_INIT, SCHEMA, handleSubmit);
+
+// מטודה שאחראית לשינויים בשדות הטופס
+const onInputChange = (e, errorEl) => {
+  const { error } = handleInputChange(e);
+  errorEl.innerHTML = error;
+  const isFormValidate = handleDisableSubmitBtn();
+  if (!isFormValidate) return SUBMIT_BTN.removeAttribute("disabled");
+  SUBMIT_BTN.setAttribute("disabled", "disabled");
+};
+
+// האזנה לאירועים
+EMAIL_FIELD.addEventListener("input", e => onInputChange(e, EMAIL_ERROR));
+PASSWORD_FIELD.addEventListener("input", e => onInputChange(e, PASSWORD_ERROR));
+SUBMIT_BTN.addEventListener("click", onSubmit);
+CANCEL_BTN.addEventListener("click", () => onReset(INPUTS_ARRAY, ERRORS_ARRAY));

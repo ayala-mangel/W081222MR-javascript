@@ -308,22 +308,22 @@
 // console.log(motorcycle);
 
 /***** static methods *****/
-// class Car {
-//   color = "black";
-//   static LENGTH = 5;
+class Car {
+  color = "black";
+  static LENGTH = 5;
 
-//   static fn() {
-//     return 10;
-//   }
-//   x() {}
-// }
+  static fn() {
+    return 10;
+  }
+  x() {}
+}
 
 // Car.CONSUMPTION = 10;
 // Car.break = () => 5;
 
-// const car = new Car();
+const car = new Car();
 
-// console.log(car);
+console.log(car);
 // console.log(Car.CONSUMPTION);
 // console.log(Car.break());
 // console.log(Car.fn());

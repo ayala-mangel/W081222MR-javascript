@@ -1,7 +1,25 @@
 /********** סוגי מחרוזות תווים **********/
+// <<<<<<< HEAD
 // let str = "";
 // let str1 = "";
 // let str2 = ``;
+
+let str = "";
+let str1 = "";
+let str2 = ``;
+
+const x = "walla";
+const y = "waw!!!";
+// const text = 'in am in "text"';
+// const text = "in am in \"text\"";
+// const text = "in am in text" + " 12";
+// const text = "in am in text " + x + " 12";
+// const text = `hallo ${1 + 2}`;
+// const text = `hallo ${false}`;
+// const text = `hallo ${x} - ${y} "text"`;
+
+console.log(text);
+// >>>>>>> fe209dc1fee3365cff0c37ca2d26edcb861c0d45
 
 /***** String ******/
 // const term = false;

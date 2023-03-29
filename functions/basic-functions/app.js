@@ -183,8 +183,6 @@
 
 // console.log(obj);
 
-/*********** Functions that call another function **********/
-
 /*********** Callback functions **********/
 
 // const fn = (cb) => {
@@ -194,7 +192,11 @@
 
 // const x = () => 5;
 
+// <<<<<<< HEAD
 // const print = fn(3);
+// =======
+//  const print = fn(3);
+// >>>>>>> d7aa1295081e52a361eb5226023e837b49b1f2da
 // const print = fn(x);
 
 // console.log(print);
